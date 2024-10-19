@@ -118,3 +118,72 @@ main .content .content-description button:hover {
   background-color: transparent;
   color: #2d3e50;
 }
+
+main aside {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+}
+
+main aside .social-media {
+  height: 100%;
+  display: flex;
+  /* border: 1px solid black; */
+}
+
+main aside .social-media ul {
+  padding: 1.5rem 2rem;
+  margin: auto;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background-color:  #2d3e50;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+main aside .social-media ul li {
+  list-style-type: none;
+}
+
+main aside .social-media ul li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  transition: all 0.4s ease-in;
+}
+
+main aside .social-media ul li a:hover {
+  color: #89b0d9;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+  }
+  .navbar-container .navigation-list ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+  }
+  main .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  main .content .content-description .title {
+    font-size: 3rem;
+  }
+  main .content .content-description p {
+    font-size: 1rem;
+  }
+  main .content .content-image {
+    order: -1;
+  }
+  main aside .social-media ul {
+    padding: 1rem 1.5rem;
+  }
+  main aside .social-media ul li a {
+    font-size: 1rem;
+  }
+}
